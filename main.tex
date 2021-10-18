@@ -1,0 +1,230 @@
+%-------------------------
+% Resume in Latex
+% Author : Harshibar
+% Based off of: https://github.com/jakeryang/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+% only for pdflatex
+% \input{glyphtounicode}
+
+% fontawesome
+\usepackage{fontawesome5}
+
+% fixed width
+\usepackage[scale=0.90,lf]{FiraMono}
+
+% light-grey
+\definecolor{light-grey}{gray}{0.83}
+\definecolor{dark-grey}{gray}{0.3}
+\definecolor{text-grey}{gray}{.08}
+
+\DeclareRobustCommand{\ebseries}{\fontseries{eb}\selectfont}
+\DeclareTextFontCommand{\texteb}{\ebseries}
+
+% custom underilne
+\usepackage{contour}
+\usepackage[normalem]{ulem}
+\renewcommand{\ULdepth}{1.8pt}
+\contourlength{0.8pt}
+\newcommand{\myuline}[1]{%
+  \uline{\phantom{#1}}%
+  \llap{\contour{white}{#1}}%
+}
+
+
+% custom font: helvetica-style
+\usepackage{tgheros}
+\renewcommand*\familydefault{\sfdefault} 
+%% Only if the base font of the document is to be sans serif
+\usepackage[T1]{fontenc}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{0in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting - serif
+% \titleformat{\section}{
+%   \vspace{2pt} \scshape \raggedright\large % header section
+% }{}{0em}{}[\color{black} \titlerule \vspace{-5pt}]
+
+% TODO EBSERIES
+% sans serif sections
+\titleformat {\section}{
+    \bfseries \vspace{2pt} \raggedright \large % header section
+}{}{0em}{}[\color{light-grey} {\titlerule[2pt]} \vspace{-4pt}]
+
+% only for pdflatex
+% Ensure that generate pdf is machine readable/ATS parsable
+% \pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-1pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & {\color{dark-grey}\small #2}\vspace{1pt}\\ % top row of resume entry
+      \textit{#3} & {\color{dark-grey} \small #4}\\ % second row of resume entry
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      #1 & {\color{dark-grey}} \\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+% CHANGED default leftmargin  0.15 in
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{0pt}}
+
+\color{text-grey}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge Alex Giovannelli} \\ \vspace{5pt}
+    \small \faPhone* \texttt{740.258.9709} \hspace{1pt} $|$
+    \hspace{1pt} \faEnvelope \hspace{2pt} \texttt{agiovannelli2234@gmail.com} \hspace{1pt} $|$ 
+    \hspace{1pt} \faMapMarker* \hspace{2pt}\texttt{Blacksburg, VA}
+    \\ \vspace{-3pt}
+\end{center}
+
+%-----------EXPERIENCE-----------
+\section{EXPERIENCE}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {JPMorgan Chase \& Co.}{July 2018 -- July 2021}
+      {Associate Software Engineer}{Columbus, OH}
+      \resumeItemListStart
+        \resumeItem{Design and development of front-end features for Chase.com (i.e. Chase Offers, Security Center, Chase Relief Hub, Saved Account Manager, etc.)}
+        \resumeItem{Generation of technical documentation for product owners and programmers}
+        \resumeItem{Subject-matter expert in automation testing and CI/CD initiatives}
+        \resumeItem{Mentorship of new employees and interns}
+        \resumeItem{\textbf{Highlights}: Promoted from Software Engineering Program after one year of service, lead developer for COVID-19 Support hub, volunteer in Software Engineering Program recruitment workstreams}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Siemens Healthineers}{Jan. 2017 -- Aug. 2017}
+      {Software Engineering Intern}{Forchheim, DE}
+      \resumeItemListStart
+        \resumeItem{Development of software in advanced therapy devices}
+        \resumeItem{Creation and documentation of high-level structures of the system design}
+        \resumeItem{Representative in international software system integration meetings}
+        \resumeItem{Scrum Master for two development iterations}
+
+    \resumeItemListEnd
+    
+    \resumeSubheading
+      {Matrix Technologies, Inc.}{Aug. 2015 -- Dec. 2015}
+      {Computer Programmer and Systems Analyst Intern}{Maumee, OH}
+      \resumeItemListStart
+        
+        \resumeItem{Generation of new software and modifications in accordance to Agile methodology}
+        \resumeItem{Management of internally-developed software for Project Managers}
+        \resumeItem{Maintenance of database for storage of project data}
+        \resumeItem{Manual creation for use of internal software tools}
+        \resumeItem{Worked on the Process Improvement Team; \textbf{received a return offer} for a full-time position}
+        
+  \resumeItemListEnd
+
+    \resumeSubheading
+      {Matrix Technologies, Inc.}{Aug. 2014 -- Dec. 2014}
+      {Computer Programmer and Systems Analyst Intern}{Maumee, OH}
+      \resumeItemListStart
+        \resumeItem{Enhancement and expansion of internal software solutions}
+        \resumeItem{Coordination of project design changes with stakeholders}
+        \resumeItem{Research for unit test implementations in existing software}
+        \resumeItem{Worked on the Process Improvement Team; \textbf{received a return offer} for an internship position}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------
+\section {EDUCATION}
+  \resumeSubHeadingListStart
+      \resumeSubheading
+      {Virginia Polytechnic Institute and State University}{Aug. 2021 -- May 2023}
+      {Master's of Science in Computer Science}{Blacksburg, VA}
+      	\resumeItemListStart
+    	\resumeItem {\textbf{Coursework}: Information Retrieval, Programming Languages}
+        \resumeItemListEnd
+        
+    \resumeSubheading
+      {University of Cincinnati}{Aug. 2013 -- May 2018}
+      {Bachelor's of Science in Computer Engineering}{Cincinnati, OH}
+      	\resumeItemListStart
+    	\resumeItem {\textbf{Achievements}: Admitted in honors International Cooperative Education Program for German Experience, Cincinnatus scholarship recipient}
+        \resumeItem {\textbf{Minors}: Computer Science, German Studies}
+        \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+%
+%-----------PROGRAMMING SKILLS-----------
+\section{SKILLS}
+ \begin{itemize}[leftmargin=0in, label={}]
+    \small{\item{
+     \textbf{Languages} {: JavaScript, Python, Go, Java, C\#, HTML/CSS}\vspace{2pt} \\
+     \textbf{Tools}     {: GitHub, Jira, Figma, Azure DevOps Server}
+    }}
+ \end{itemize}
+
+
+%-------------------------------------------
+\end{document}
